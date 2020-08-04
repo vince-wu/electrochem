@@ -47,7 +47,7 @@ pyparsing==2.4.7
 PyQt5==5.15.0
 PyQt5-sip==12.8.0
 pytest==4.6.5
-pytest-runner==5.1
+pytest-runner==5.2
 python-dateutil==2.8.1
 python-slugify==4.0.1
 pytz==2020.1
