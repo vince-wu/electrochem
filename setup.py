@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 """The setup script."""
-from electrochem._version import __version__
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
@@ -48,6 +47,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/vince-wu/electrochem',
-    version=__version__,
+    version='0.1.0',
     zip_safe=False,
 )
