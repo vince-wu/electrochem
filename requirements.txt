@@ -66,7 +66,7 @@ tqdm==4.48.2
 twine==3.2.0
 urllib3==1.25.10
 virtualenv==20.0.29
-watchdog==0.9.0
+watchdog==0.10.3
 wcwidth==0.2.5
 webencodings==0.5.1
 xlrd==1.2.0
