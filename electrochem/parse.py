@@ -225,21 +225,23 @@ def plotEchem(indexedData, figurePath, system, cycleList, show=True, molar_mass=
             plt.plot(x2_data, y2_data, '-', color=color, linewidth=4)
     # plt.ylim(1.3, 4.3)
     # plt.xlim(-2.7, 61)
-    plt.xlabel('$x$ in Na$_{2-x}$Mn$_3$(VO$_4$)$_2$PO$_4$', fontsize=fsize)
+    if option == 1:
+        plt.xlabel('$x$ in Na$_{2-x}$Mn$_3$(VO$_4$)$_2$PO$_4$', fontsize=fsize)
     plt.ylabel('Voltage [V]', fontsize=fsize)
     #plt.title('Cycling Data for ' + system)
     #plt.title('Cycling Data for ' + 'Cathode A')
-    # if molar_mass != 0:
-    #     full_capacity = 1/molar_mass*96500*0.2777
-    #     ax2 = ax.secondary_xaxis('top')
-    #     xticks = ax.get_xticks()
-    #     ax2.set_xticks(xticks)
-    #     ticklabels = [np.round(x/full_capacity, 1) for x in xticks]
-    #     # ticklabels = [-0.01, 0, 0.02, 0.04, 0.06, 0.08]
-    #     ax2.set_xticks([x*full_capacity for x in ticklabels])
-    #     ax2.set_xticklabels(ticklabels)
-    #     print([x*full_capacity for x in ticklabels])
-    #     ax2.set_xlabel('Na$^+$ ions inserted/ extracted')
+    if option == 0:
+        plt.xlabel('Capacity [mAh/g]', fontsize=fsize)
+        full_capacity = 1/molar_mass*96500*0.2777
+        ax2 = ax.secondary_xaxis('top')
+        xticks = ax.get_xticks()
+        ax2.set_xticks(xticks)
+        ticklabels = [np.round(x/full_capacity, 1) for x in xticks]
+        # ticklabels = [-0.01, 0, 0.02, 0.04, 0.06, 0.08]
+        ax2.set_xticks([x*full_capacity for x in ticklabels])
+        ax2.set_xticklabels(ticklabels)
+        print([x*full_capacity for x in ticklabels])
+        ax2.set_xlabel('Na$^+$ ions inserted/ extracted')
     plt.legend(prop={'size': 22}).set_draggable(True)
     plt.tight_layout()
     # Save matplotlib figure as png
