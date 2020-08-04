@@ -8,4 +8,4 @@ Sphinx==1.8.5
 twine==1.14.0
 Click==7.1.2
 pytest==6.0.1
-pytest-runner==5.1
+pytest-runner==5.2
