@@ -6,8 +6,8 @@ Arbin Electrochemical Tools
 .. image:: https://img.shields.io/pypi/v/electrochem.svg
         :target: https://pypi.python.org/pypi/electrochem
 
-.. image:: https://img.shields.io/travis/vince-wu/electrochem.svg
-        :target: https://travis-ci.com/vince-wu/electrochem?branch=master
+.. image:: https://img.shields.io/travis/vince-wu/electrochem.svg?branch=master
+        :target: https://travis-ci.com/vince-wu/electrochem
 
 .. image:: https://readthedocs.org/projects/electrochem/badge/?version=latest
         :target: https://electrochem.readthedocs.io/en/latest/?badge=latest
