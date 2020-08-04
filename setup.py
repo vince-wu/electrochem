@@ -2,6 +2,7 @@
 
 """The setup script."""
 from setuptools import setup, find_packages
+import os
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -14,6 +15,14 @@ requirements = ['Click>=7.0', ]
 setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
+
+name = "electrochem"
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+version_ns = {}
+with open(os.path.join(here, name, "_version.py")) as f:
+    exec(f.read(), {}, version_ns)
 
 setup(
     author="Vincent Wu",
@@ -47,6 +56,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/vince-wu/electrochem',
-    version='0.1.0',
+    version= version_ns["__version__"],
     zip_safe=False,
 )
