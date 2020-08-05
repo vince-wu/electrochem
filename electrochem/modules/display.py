@@ -56,6 +56,7 @@ def getVersionText(self):
     if not debug:
         #Get program's newest version from Github API, compare to current version
         json_response = getJson()
+        # json_response = None
         if json_response:
             newestVersion = json_response['tag_name']
             bodyText = json_response['body']

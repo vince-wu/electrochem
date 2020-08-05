@@ -9,10 +9,10 @@ from pkg_resources import parse_version
 from PyQt5.QtWidgets import QApplication, QFileDialog
 from requests.exceptions import HTTPError
 
-import errors
-from utils import getActiveMass
-from display import displayError, setUpGraph
-from parse import toDataframe, readArbin, generateEchemSummary, extractEchem
+import modules.errors
+from modules.utils import getActiveMass
+from modules.display import displayError, setUpGraph
+from parse import toDataframe, parseArbin, generateEchemSummary, extractEchem
 
 matplotlib.use('Qt5Agg')
 
