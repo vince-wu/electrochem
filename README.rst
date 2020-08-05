@@ -28,7 +28,9 @@ Features
 
 * Extracts Arbin electrochemical cycling data files (.res or .xlxs) into csv files or Pandas dataframes
 for easy manipulation
+
 * Plots publication quality voltage-capacity curves 
+
 * Calculates electrochemical properties such as operating voltage, average discharge capacity, ect. 
 for a set of cycling data and generates summary tables
 
