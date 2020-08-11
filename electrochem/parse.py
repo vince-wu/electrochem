@@ -223,7 +223,7 @@ def plotEchem(indexedData, figurePath, system, cycleList, show=True, molar_mass=
             color = next(ax._get_lines.prop_cycler)['color']
             plt.plot(x1_data, y1_data, '-', color=color,  linewidth=4, label='Cycle %s'%(index+1))
             plt.plot(x2_data, y2_data, '-', color=color, linewidth=4)
-    # plt.ylim(1.3, 4.3)
+    plt.ylim(1.3, 4.3)
     # plt.xlim(-2.7, 61)
     plt.ylabel('Voltage [V]', fontsize=fsize)
     #plt.title('Cycling Data for ' + system)
@@ -302,7 +302,7 @@ def runTasks(filepath, choosefile, figurePath, tablePath, cycleList, mass,
         path = filedialog.askopenfilename()
     else:
         path = filepath
-    extension = os.path.splitext(filepath)[1]
+    extension = os.path.splitext(path)[1]
     if extension == '.res':
         parseArbin(path, 'data.csv', 'Channel_Normal_Table')
         path = 'data.csv'
@@ -331,24 +331,27 @@ if __name__ == "__main__":
         # filepath = 'd:/Clement Research/Electrochem/VW-MnAl-B01-S01-B-E1.xls',
         # filepath = 'd:/Clement Research/Electrochem/VW-PMnMn-B02-S01-E1-01.xls',
         # filepath = 'd:/Clement Research/Electrochem/VW-PMnAl-B01-S01-B-E1.xls',
-        filepath = 'd:/Clement Research/Electrochem/VW-PVMnMn-B01-S01-E1.xls',
+        filepath = 'd:/Clement Research/Electrochem/VW-MnMn-B08-S01-E1.res',
         choosefile = False, # whether or not to choose your file directly (will ignore filepath, filename if true)
         figurePath = 'd:/Clement Research/Electrochem/Figures/', # the directory to save your plot in
         tablePath = 'd:/Clement Research/Electrochem/Summaries/', # the directory to save your table in
-        cycleList = range(100),
+        cycleList = range(5),
         # mass = 28.5, # mass of entire cathode (do not multiply by active mass ratio)
         # mass = 17.6,
         # mass = 13.7,
-        # mass = 14,
-        mass = 12.3,
+        mass = 10.1,
+        # mass = 12.5, #MnMn-B08-S01-G-E1
+        # mass = 12.1, #PMnMn-B03-S01-B-G-E1
+        # mass = 9.3, #MnAl-B06-S01-G-E1
+        # mass = 10.2, #PMnAl-B03-S01-G-E1
         ACBratio = '70:20:10', # active:carbon:binder ratio
         rate = 'C/20', # rate
         cellType = 'Swagelok', # cell type
         anode = 'Na', # anode material
         comments = None, # comments
-        # molar_mass = 555.61, #Na2Mn3(VO4)3
+        molar_mass = 555.61, #Na2Mn3(VO4)3
         # molar_mass = 527.65, #Na2Mn2Al(VO4)3
         # molar_mass = 495.71, #Na2Mn3(PO4)3
         # molar_mass = 467.75, #Na2Mn2Al(PO4)3
-        molar_mass = 535.64 #Na2Mn3(VO4)2PO4
+        # molar_mass = 535.64 #Na2Mn3(VO4)2PO4
         )

@@ -7,8 +7,8 @@ Welcome to Arbin Electrochemical Tools's documentation!
 
    readme
    installation
-   usage
    quickstart
+   usage
    modules
    contributing
    authors
