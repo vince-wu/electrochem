@@ -52,7 +52,7 @@ python-slugify==4.0.1
 pytz==2020.1
 PyYAML==5.3.1
 readme-renderer==26.0
-requests==2.24.0
+requests==2.28.1
 requests-toolbelt==0.9.1
 six==1.15.0
 snowballstemmer==2.0.0
