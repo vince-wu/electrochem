@@ -9,7 +9,7 @@ pandas==1.1.0
 Pillow==7.2.0
 pyodbc==4.0.30
 pyparsing==2.4.7
-PyQt5==5.15.0
+PyQt5==5.15.8
 PyQt5-sip==12.8.0
 python-dateutil==2.8.1
 pytz==2020.1
