@@ -1,6 +1,6 @@
 alabaster==0.7.12
 appdirs==1.4.4
-argh==0.26.2
+argh==0.29.4
 arrow==0.15.8
 atomicwrites==1.4.0
 attrs==19.3.0
