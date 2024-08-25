@@ -43,7 +43,7 @@ pycodestyle==2.6.0
 pyflakes==2.2.0
 Pygments==2.6.1
 pyodbc==4.0.30
-pyparsing==2.4.7
+pyparsing==3.1.4
 pytest==6.0.1
 pytest-runner==5.2
 python-dateutil==2.8.1
