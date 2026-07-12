@@ -1,18 +1,12 @@
 import os
-import sys
 
 import matplotlib
-import requests
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
-from matplotlib.figure import Figure
-from pkg_resources import parse_version
 from PyQt5.QtWidgets import QApplication, QFileDialog
-from requests.exceptions import HTTPError
 
-import modules.errors
-from modules.utils import getActiveMass
-from modules.display import displayError, setUpGraph
-from parse import toDataframe, parseArbin, generateEchemSummary, extractEchem
+from electrochem.modules.display import displayError, setUpGraph
+from electrochem.modules.utils import getActiveMass
+from electrochem.parse import (extractEchem, generateEchemSummary, parseArbin,
+                               toDataframe)
 
 matplotlib.use('Qt5Agg')
 
@@ -132,7 +126,7 @@ def runTasks(self):
         QApplication.processEvents()
         extension = os.path.splitext(inputs.dataPath)[1]
         if extension == '.res':
-            readArbin(inputs.dataPath, 'data.csv', 'Channel_Normal_Table')
+            parseArbin(inputs.dataPath, 'data.csv', 'Channel_Normal_Table')
             path = 'data.csv'
         else:
             path = inputs.dataPath

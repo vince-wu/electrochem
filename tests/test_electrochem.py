@@ -3,10 +3,8 @@
 """Tests for `electrochem` package."""
 
 import pytest
-
 from click.testing import CliRunner
 
-from electrochem import electrochem
 from electrochem import cli
 
 

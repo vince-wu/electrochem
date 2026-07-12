@@ -1,4 +1,7 @@
-import csv, pyodbc
+import csv
+
+import pyodbc
+
 
 def read_arbin(source_path, save_path, table_name):
     #table_name = 'Channel_Normal_Table'

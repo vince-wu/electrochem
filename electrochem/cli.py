@@ -1,5 +1,6 @@
 """Console script for electrochem."""
 import sys
+
 import click
 
 

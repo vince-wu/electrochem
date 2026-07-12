@@ -1,15 +1,15 @@
-from PyQt5 import QtWidgets, QtCore
-from pkg_resources import parse_version
-import sys
-import matplotlib
-matplotlib.use('Qt5Agg')
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
-from matplotlib.figure import Figure
-import requests
-from requests.exceptions import HTTPError
-import json
 import os
 import re
+
+import matplotlib
+import requests
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+from matplotlib.figure import Figure
+from pkg_resources import parse_version
+from PyQt5 import QtCore, QtWidgets
+from requests.exceptions import HTTPError
+
+matplotlib.use('Qt5Agg')
 
 def initDisplay(self):
     #Set initial display background color
